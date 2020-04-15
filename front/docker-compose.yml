@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  adminmongo:
+    image: mrvautin/adminmongo
+    networks:
+      - intranet
+    ports:
+      - 1234:1234
+    environment:
+      - HOST=0.0.0.0
+
+networks:
+  intranet:
+    name: intranet
